@@ -188,22 +188,11 @@ main {
                 width: 500px;
                 height: auto;
                 border-radius: 20px;
-                transition: all 0.3s ease; /* 添加過渡效果 */
-
-                // &:first-child {
-                //    left: 10%; 
-                //     top:20px;
-                //     z-index: 1;
-                // }
-                // &:nth-child(2) {
-                //     top:-10px;
-                // }
-                // &:last-child {
-                //     right: 10%; 
-                //     top:35px;
-                //     height: 350px;
-                // }
-              
+                transition: all 0.3s ease;               
+            }
+            img:hover{
+                transform:scale(1.5);
+                z-index: 10;
             }
         }
         

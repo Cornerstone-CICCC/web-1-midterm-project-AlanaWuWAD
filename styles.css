@@ -205,7 +205,11 @@ main .work_experience .figures img {
   width: 500px;
   height: auto;
   border-radius: 20px;
-  transition: all 0.3s ease; /* 添加過渡效果 */
+  transition: all 0.3s ease;
+}
+main .work_experience .figures img:hover {
+  transform: scale(1.5);
+  z-index: 10;
 }
 main .skill {
   width: 100%;
