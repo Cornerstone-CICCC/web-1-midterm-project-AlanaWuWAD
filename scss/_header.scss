@@ -16,11 +16,15 @@ header{
         list-style: none;
 
         li{            
+            transition: transform 0.5s;
             font-weight: 700;
             font-size: 1.2rem;
-            font-style: normal;     
-
+            font-style: normal;    
         }
+        li:hover{
+            transform: rotate(360deg);
+        }
+        
         
     }
 

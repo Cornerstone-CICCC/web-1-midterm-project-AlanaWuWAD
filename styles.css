@@ -17,9 +17,13 @@ header .title ul {
   list-style: none;
 }
 header .title ul li {
+  transition: transform 0.5s;
   font-weight: 700;
   font-size: 1.2rem;
   font-style: normal;
+}
+header .title ul li:hover {
+  transform: rotate(360deg);
 }
 header .name {
   text-align: right;
@@ -191,29 +195,17 @@ main .work_experience .figures {
   position: relative;
   width: 100%;
   display: flex;
+  gap: 5px;
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 500px;
 }
 main .work_experience .figures img {
-  position: absolute;
+  position: relative;
   width: 500px;
   height: auto;
   border-radius: 20px;
   transition: all 0.3s ease; /* 添加過渡效果 */
-}
-main .work_experience .figures img:first-child {
-  left: 10%;
-  top: 20px;
-  z-index: 1;
-}
-main .work_experience .figures img:nth-child(2) {
-  top: -10px;
-}
-main .work_experience .figures img:last-child {
-  right: 10%;
-  top: 35px;
-  height: 350px;
 }
 main .skill {
   width: 100%;
@@ -358,11 +350,14 @@ footer .self-info .fa-regular, footer .self-info .fa-brands {
   font-size: 1.7rem;
 }
 footer .self-info .email-link {
-  color: white; /* 設置整個連結的顏色為白色 */
-  text-decoration: none; /* 移除下劃線 */
+  color: white;
+  text-decoration: none;
 }
 footer .self-info .email-link:hover {
-  color: #F4BFDB; /* 可選：設置懸停效果，讓顏色變得稍微不同 */
+  color: #F4BFDB;
+}
+footer .self-info .ig:hover {
+  color: #F4BFDB;
 }
 
 body {
