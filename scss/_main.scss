@@ -1,0 +1,345 @@
+@use './variables.scss' as var;
+
+main {
+    width: 100%;
+
+    section{
+        scroll-margin-top: 40px; 
+    }
+    .figure{
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center; /* 水平置中 */
+        align-items: center; /* 垂直置中 */
+        margin: 0;
+
+        p{
+            position: absolute;
+            top: 5%;
+            left: 40%;
+            font-size: 3rem;
+            color: #EFF2F1;
+            font-family: "Limelight", sans-serif;
+            text-shadow: 2px 2px 4px rgba(13, 2, 33, 0.7);
+            text-align: center;
+            z-index: 1;
+        }
+        img{
+            width: 80%;
+            height: 20%;
+            z-index: -1;
+        }
+    }
+
+    .about {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        justify-content: flex-start; 
+        position: relative;
+        margin-top: 50px;
+        margin-bottom: 100px;
+        color: #102542;
+        .range{
+            position: relative;
+        
+            h2 {
+                margin: 0;
+                padding: 10px;
+                position: relative;
+                z-index: 1; /* 確保 h2 在 color-bar 上方 */
+                left:-100px;
+                font-size: var.$h2-font-size;
+                
+            }
+            .color-bar {
+                position: absolute;
+                left:-100px;
+                top: var.$color-bar-top;
+                width: 200%;
+                height: 90%;
+                background-color: #75B9BE; /* 設定背景顏色 */
+                z-index: 0; /* color-bar 在 h2 背後 */
+            }
+        }
+
+        .content{
+            display: flex;
+            width: 100%;
+            //margin-top: 40px;
+            margin-left: 400px;
+            text-align: center; /* 文字置中 */
+            align-items: center;
+            gap:50px;
+
+            img{
+                width: 30%;
+                height: auto;
+                position: relative;
+                top: 0px;
+            }
+            
+            p{
+                width: 100%;
+                position: relative;
+                top: 30px;
+                font-family: var.$font-family;
+                font-weight: 100;
+                flex-basis: 900px;
+                font-size: var.$p-font-size;
+                line-height: var.$line-height;
+            }
+        }
+        
+         .bold-text{
+            color: #102542;
+            font-weight: 900;
+            font-size: 1.6rem;
+        }
+    }
+    
+    .work_experience{
+        color: #102542;
+        position: relative;
+        height: auto;
+        
+        h2 {
+            margin: 0;
+            padding: 10px;
+            position: relative;
+            z-index: 1; /* 確保 h2 在 color-bar 上方 */
+            font-size: var.$h2-font-size;
+        }
+        .color-bar {
+            position: absolute;
+            top: var.$color-bar-top;
+            width: 70%;
+            height: 7%;
+            background-color: #75B9BE; 
+            z-index: 0; 
+        }
+
+        .grid{
+            display: grid;
+            gap:10px;
+            padding: 5px;
+            margin: 50px;
+            margin-top: 80px;
+            color: rgb(255, 255, 255,0.95);
+            font-size: var.$p-font-size;
+            font-family:var.$font-family;
+            font-weight: 600;
+
+            img{
+                width: 15%;
+                height: auto;
+            }
+
+            p{margin-left: 50px;}
+            ul{
+                margin-left: 5px;
+                font-weight: 300;
+                line-height: var.$line-height;
+            }
+
+            #job1{
+                background-color:#F9A620;
+                border-radius: 10px;
+                grid-row: 1/2;
+                grid-column: 1/2;
+                color: black;
+
+            }
+            #job2{
+                background-color: #252547;
+                border-radius: 10px;
+                margin-left: 100px;
+                grid-row: 2/3;
+                grid-column: 1/3;
+                color: #F3F8F2;
+            }
+            #border{
+                font-size: 2rem;
+            }
+            #occupation{
+                font-size: 1.7rem;
+            }
+            #date{
+                font-size: 1.3rem;
+            }
+
+            
+        }
+
+        .figures{
+            position:relative;
+            width: 100%;
+            display:flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 500px;
+
+            img{
+                position:absolute;
+                width: 500px;
+                height: auto;
+                border-radius: 20px;
+                transition: all 0.3s ease; /* 添加過渡效果 */
+
+                &:first-child {
+                    left: 10%; 
+                    top:20px;
+                    z-index: 1;
+                }
+                &:nth-child(2) {
+                    top:-10px;
+                }
+                &:last-child {
+                    right: 10%; 
+                    top:35px;
+                    height: 350px;
+                }
+              
+            }
+        }
+        
+    }
+
+    .skill{
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+
+        h2 {
+            margin: 0;
+            padding: 10px;
+            position: relative;
+            z-index: 1; 
+            font-size: var.$h2-font-size;
+            color:white;
+        }
+        .color-bar {
+            position: absolute;
+            top: var.$color-bar-top;
+            width: 70%;
+            height: 15%;
+            background-color: #75B9BE; 
+            z-index: 0; 
+        }
+     
+        .skill-list{
+            margin-top: 150px;
+            margin-left: 300px;
+            width: 80%;
+            height: auto;
+            font-size: var.$p-font-size;
+            line-height: 250%;
+            font-family: var.$font-family;
+            font-weight: 580;
+            color: white;
+
+            .bold-text{
+                font-size: 1.6rem;
+                font-weight: 800;
+                color:#F2DC5D;
+            }
+        }
+
+    }
+    .skill::before{
+        content: "";
+        position: absolute;
+        bottom: -50px;
+        width: 70%;
+        height: 90%;
+        background-image: url('image/skill.jpg');
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.15; 
+        z-index: -1; 
+    }
+
+    .education{
+        width: 100%;
+        height: auto;
+        position: relative;
+        z-index: -1; 
+        h2 {
+            margin: 0;
+            padding: 10px;
+            position: relative;
+            z-index: 1; 
+            font-size: var.$h2-font-size;
+            color: white;
+        }
+        .color-bar {
+            position: absolute;
+            top: var.$color-bar-top;
+            width: 70%;
+            height: 20%;
+            background-color: #75B9BE; 
+            z-index: 0; 
+        }
+        .school{
+            position: relative;
+            margin-top:-320px;
+            font-family:var.$font-family ;
+            font-size: var.$p-font-size;
+            display: flex;
+            justify-content: space-around;
+            font-weight: 700;
+            color: white;
+        
+            #degree{                
+                font-weight: 1000;
+                color: #F1C40F;
+            }
+            .master{
+                
+                position: relative;
+                left:150px;
+            }
+            .bachelor{
+                z-index: 100;
+            }
+        }
+
+        .blocks{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin-top: 80px;
+            .block1{
+                position: relative;
+                width: 30%;
+                height: 300px;
+                top:167px;
+                left:-90px;
+                background-image: url('image/NYCU.png');
+                background-size: cover;        
+                background-position: center;    
+                background-repeat: no-repeat;  
+            }
+            .block2{
+                position: relative;
+                left:40px;
+                top:167px;
+                width: 30%;
+                height: 300px;
+                background-image: url('image/NKNU.png');
+                background-size: cover;        
+                background-position: center;    
+                background-repeat: no-repeat;  
+            }
+
+        }
+        
+    }
+}

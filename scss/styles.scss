@@ -1,0 +1,18 @@
+@use './variables';
+@use './header';
+@use './main';
+@use './footer';
+
+body{
+    width: 100%;
+    height: auto;
+    background-image: url('image/bkg.jpg');
+    background-size: cover;
+    background-position: center;
+    //color:aliceblue;   
+}
+
+section{
+    width: 100%;
+    height: auto;      
+}

@@ -1,0 +1,32 @@
+@use './variables.scss' as var;
+footer{
+    margin-top:500px;
+    padding: 10px;
+    background-color: #4e4f4f;
+    text-align: center;
+    line-height: 150%;
+    color: white;
+    
+
+    .self-info{
+        font-size: 1.2rem;
+        font-family: var.$font-family;
+        font-weight: 700;
+        margin-bottom: 30px;
+
+        .fa-regular, .fa-brands{
+            font-size: 1.7rem;
+        }
+
+        .email-link {
+            color: white; /* 設置整個連結的顏色為白色 */
+            text-decoration: none; /* 移除下劃線 */
+        }
+        .email-link:hover {
+            color: #F4BFDB; /* 可選：設置懸停效果，讓顏色變得稍微不同 */
+        }
+
+
+        
+    }
+}
